@@ -1,0 +1,25 @@
+$jhpl-theme-1: rgba(95, 222, 104, 1);
+$jhpl-theme-2: rgba(95, 222, 189, 1);
+$jhpl-theme-3: rgba(95, 222, 146, 1);
+$jhpl-theme-4: rgba(139, 222, 95, 1);
+$jhpl-theme-5: rgba(95, 213, 222, 1);
+$jhpl-theme-6: rgba(108, 223, 154, 1);
+
+nav {
+    .navbar-container {
+        align-items: center;
+        background-color: $jhpl-theme-2;
+        width: 100%;
+
+        .navbar-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            .navbar-button {
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+}
