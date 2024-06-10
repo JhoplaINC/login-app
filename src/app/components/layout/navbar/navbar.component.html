@@ -1,15 +1,15 @@
 <nav>
     <div class="navbar-container">
         <div class="navbar-list">
-            <button class="navbar-button">
-                Home
-            </button>
-            <button class="navbar-button">
-                Contact Us
-            </button>
-            <button class="navbar-button">
-                Log In
-            </button>
+            <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <button class="navbar-button">Home</button>
+            </a>
+            <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <button class="navbar-button">Contact Us</button>
+            </a>
+            <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <button class="navbar-button">Login</button>
+            </a>
         </div>
     </div>
 </nav>

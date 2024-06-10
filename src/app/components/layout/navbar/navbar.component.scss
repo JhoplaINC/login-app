@@ -1,24 +1,55 @@
 $jhpl-theme-1: rgba(95, 222, 104, 1);
 $jhpl-theme-2: rgba(95, 222, 189, 1);
 $jhpl-theme-3: rgba(95, 222, 146, 1);
-$jhpl-theme-4: rgba(139, 222, 95, 1);
+$jhpl-theme-4: rgba(139, 222, 95, .6);
 $jhpl-theme-5: rgba(95, 213, 222, 1);
 $jhpl-theme-6: rgba(108, 223, 154, 1);
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$text: rgb(220, 220, 220);
+$text-dark: rgb(60, 60, 60);
+$shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.05);
+$active-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0px 6px 10px rgba(0, 0, 0, 0.05);
 
 nav {
     .navbar-container {
-        align-items: center;
-        background-color: $jhpl-theme-2;
+        background-color: $jhpl-theme-5;
+        height: 42px;
+        padding: 10px 0;
         width: 100%;
-
+        
         .navbar-list {
             display: flex;
             flex-direction: row;
+            height: 100%;
             justify-content: space-evenly;
 
-            .navbar-button {
-                border: none;
-                background-color: transparent;
+            a {
+                color: $text-dark;
+                text-decoration: none;
+
+                .navbar-button {
+                    background-color: $jhpl-theme-4;
+                    border: none;
+                    border-radius: 8px;
+                    box-shadow: $shadow;
+                    color: $text-dark;
+                    font-family: "Lato", sans-serif;
+                    font-size: 15px;
+                    padding: 10px 15px;
+
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: $active-shadow;
+                    }
+                }
+
+                &.active {
+
+                    .navbar-button {    
+                        box-shadow: $active-shadow;
+                    }
+                }
             }
         }
     }
