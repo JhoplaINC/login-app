@@ -7,7 +7,6 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { SubmitComponent } from '../../modals/submit/submit.component';
 import { CommonModule } from '@angular/common';
-import { provideAnimations } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-contact',
@@ -30,7 +29,8 @@ export class ContactComponent {
       width: '500px',
       data: {
         title: 'Thanks for contacting us',
-        message: 'This and other modals here, are just decorative :)'
+        message: 'This and other modals here, are just decorative :)',
+        actionButton: 'Close'
       }
     });
 

@@ -33,7 +33,7 @@ import { CommonModule } from '@angular/common';
 
 export class SubmitComponent {
   constructor(public dialogRef: MatDialogRef<SubmitComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: {title: string, message: string}
+    @Inject(MAT_DIALOG_DATA) public data: {title: string, message: string, actionButton: string}
   ) { }
 
   closeModal(): void {

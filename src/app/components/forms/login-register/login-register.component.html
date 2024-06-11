@@ -1,1 +1,47 @@
-<p>login-register works!</p>
+<div class="form" *ngIf="actualUrl == '/login'">
+    <p class="form-title">Login</p>
+    <div class="form-group">
+        <fa-icon [icon]="faAt"></fa-icon>
+        <input type="text" name="email" id="email" placeholder="Your email">
+    </div>
+    <div class="form-group">
+        <fa-icon [icon]="faKey"></fa-icon>
+        <input type="password" name="password" id="password" placeholder="Your password">
+    </div>
+    <div class="form-group submit-form">
+        <fa-icon [icon]="faPaperPlane"></fa-icon>
+        <button mat-button (click)="loginForm()">Login</button>
+    </div>
+    <p>
+        If you don't have an account, you can 
+        <a routerLink="/register">
+            create one
+        </a>
+    </p>
+</div>
+
+<div class="form" *ngIf="actualUrl == '/register'">
+    <p class="form-title">Register</p>
+    <div class="form-group">
+        <fa-icon [icon]="faUser"></fa-icon>
+        <input type="text" name="name" id="name" placeholder="Your name">
+    </div>
+    <div class="form-group">
+        <fa-icon [icon]="faAt"></fa-icon>
+        <input type="text" name="email" id="email" placeholder="Your email">
+    </div>
+    <div class="form-group">
+        <fa-icon [icon]="faKey"></fa-icon>
+        <input type="password" name="password" id="password" placeholder="Your password">
+    </div>
+    <div class="form-group submit-form">
+        <fa-icon [icon]="faPaperPlane"></fa-icon>
+        <button mat-button (click)="registerForm()">Register</button>
+    </div>
+    <p>
+        If already have an account, you can 
+        <a routerLink="/login">
+            Log In
+        </a>
+    </p>
+</div>
