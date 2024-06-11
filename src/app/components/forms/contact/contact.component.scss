@@ -1,0 +1,140 @@
+$jhpl-theme-1: rgba(95, 222, 104, 1);
+$jhpl-theme-2: rgba(95, 222, 189, 1);
+$jhpl-theme-3: rgba(95, 222, 146, 1);
+$jhpl-theme-4: rgba(139, 222, 95, .6);
+$jhpl-theme-5: rgba(95, 213, 222, 1);
+$jhpl-theme-6: rgba(108, 223, 154, 1);
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$text: rgb(220, 220, 220);
+$text-dark: rgb(60, 60, 60);
+$link: rgb(155, 19, 208);
+$visited_link: rgb(94, 7, 128);
+$shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.05);
+$active-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0px 6px 10px rgba(0, 0, 0, 0.05);
+
+.form {
+    background-color: $jhpl-theme-3;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    color: $text-dark;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto 20px;
+    padding-bottom: 25px;
+    width: 800px;
+
+    .form-title {
+        text-align: center;
+        font-size: 22px;
+        margin: 20px 0 45px;
+        width: 100%;
+    }
+
+    .left-side-form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 16px;
+        width: 42%;
+
+        p {
+            margin: 0;
+            padding: 0;
+
+            &:first-of-type, &:nth-child(3) {
+                font-size: 18px;
+            }
+
+            &:nth-child(2) {
+                font-size: 14px;
+                margin-top: 5px;
+            }
+
+            &:last-of-type {
+                font-size: 18px;
+                text-decoration: underline;
+                margin-top: 10px;
+
+                a {
+                    color: $text-dark;
+                
+                    &:visited {
+                        color: $text-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-side-form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        .form-group {
+            align-items: center;
+            box-shadow: $shadow;
+            display: flex;
+            flex-direction: row;
+            margin-right: 20px;
+            margin-bottom: 10px;
+
+            fa-icon {
+                background-color: $jhpl-theme-2;
+                display: flex;
+                margin: 0;
+                padding: 8px 2px 9px 10px;
+                width: 24px;
+            }
+
+            input {
+                border: none;
+                height: 31px;
+                outline: none;
+                padding-left: 8px;
+                width: 100%;
+            } 
+
+            textarea {
+                border: none;
+                height: 29px;
+                max-height: 200px;
+                min-height: 29px;
+                outline: none;
+                padding-left: 8px;
+                resize: vertical;
+                width: 100%;
+            }
+        }
+
+        .submit-form {
+            margin: 30px auto 0;
+
+            fa-icon {
+                background-color: $jhpl-theme-2;
+                display: flex;
+                margin: 0;
+                padding: 8px 2px 9px 10px;
+                width: 24px;
+            }
+
+            button {
+                background-color: $jhpl-theme-2;
+                border: none;
+                height: 33px;
+                padding-left: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &:hover {
+                box-shadow: $active-shadow;
+                cursor: pointer;
+            }
+        }
+    }
+}
